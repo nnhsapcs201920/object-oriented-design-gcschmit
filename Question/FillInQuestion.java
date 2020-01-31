@@ -13,27 +13,30 @@ import java.util.Scanner;
  */
 public class FillInQuestion extends Question
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class FillInQuestion
+    /*
+     * Do not declare instance variables for text and answer! The text and answer instance variables
+     *      are inherited from the Question class!
      */
-    public FillInQuestion()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Constructs a FillInQuestion object with the specified text that contains the answer.
+     * 
+     * @param question  the specified question text with embedded answer
      */
-    public int sampleMethod(int y)
+    public FillInQuestion(String question)
     {
-        // put your code here
-        return x + y;
+        /*
+         * Explicity call the Question class's constructor that takes a string parameter.
+         *      Calling a superclass's constructor must be the first line of code in the 
+         *      subclass's constructor.
+         *      
+         *  If we don't explicilty call a superclass's constructor, Java will automatically
+         *      call the superclass's default (i.e., no parameters) constructor.
+         */
+        super(question);
     }
 }
+
+
+
+
