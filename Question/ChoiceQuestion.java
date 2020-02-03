@@ -42,10 +42,12 @@ public class ChoiceQuestion extends Question
         }
     }
 
+    @Override
     public String toString()
     {
         // Display the question text
         String str = super.toString();
+        
         // Display the answer choices
         for (int i = 0; i < this.choices.size(); i++)
         {
