@@ -36,6 +36,49 @@ public class FillInQuestion extends Question
          */
         super(question);
     }
+    
+    /**
+     * This method overrides the setText method in the Question class.
+     * 
+     * Sets the question text and the answer.
+     * 
+     * @param questionText  the text of the question including the answer
+     */
+    /*
+     * Use the @Override annotation when overriding a method to help the compiler verify
+     *      that you are overriding and not overloading.
+     */
+    @Override
+    public void setText(String questionText)
+    {
+        Scanner parser = new Scanner(questionText);
+        parser.useDelimiter("_");
+        String question = parser.next();        // "The inventor of Java is "
+        String answer = parser.next();          // "James Gosling"
+        question += "______" + parser.next();   // "______."
+        
+        /*
+         * The inherited instance variables are private; they cannot be directly accessed.
+         *      We must use the mutator and accessor methods.
+         */
+        //this.text = question;
+        //this.answer = answer;
+        
+        /*
+         * Use the "super" reserved word to call the setText method as defined in the superclass
+         *      (i.e., Question).
+         */
+        super.setText(question);
+        
+        /*
+         * Should use the "this" reserved word to call the setAnswer method. If the subclass
+         *      doesn't override the method, the superclass's method will be called.
+         *      
+         *  We don't want to use "super" in this case because if we later override setAnswer,
+         *      the overriden method will not be called.
+         */
+        this.setAnswer(answer);
+    }
 }
 
 
