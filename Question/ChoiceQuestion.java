@@ -12,7 +12,7 @@ public class ChoiceQuestion extends Question
      */
     public ChoiceQuestion()
     {
-        this( "" );
+        
     }
 
     /**
@@ -22,7 +22,7 @@ public class ChoiceQuestion extends Question
      */
     public ChoiceQuestion( String question ) 
     {
-        super( question );
+        super(question);
         this.choices = new ArrayList<String>();
     }
 
@@ -42,6 +42,7 @@ public class ChoiceQuestion extends Question
         }
     }
 
+    @Override
     public String toString()
     {
         // Display the question text
