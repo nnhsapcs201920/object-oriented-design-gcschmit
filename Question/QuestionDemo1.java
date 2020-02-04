@@ -21,16 +21,21 @@ public class QuestionDemo1
       q2.addChoice("Steve Jobs", true);
 
       Question q = new FillInQuestion("The inventor of Java is _James Gosling_.");
-      System.out.println( q );
-      System.out.print("Your answer: ");
-      String response = in.nextLine();
+      // System.out.println( q );
+      // System.out.print("Your answer: ");
+      // String response = in.nextLine();
       /*
        * The FillInQuestion class inherits the checkAnswer method. We don't need to override it
        *    because the inherited behavior is what is needed. Inheriting a method improve reliability
        *    (implemented in one place) and developer productivity (avoid rewriting the same code).
        *    Imagine if we had a dozen subclasses.
        */
-      System.out.println(q.checkAnswer(response));
+      // System.out.println(q.checkAnswer(response));
+      
+      Exam exam = new Exam();
+      exam.addQuestion(q);
+      exam.addQuestion(q2);
+      exam.askQuestions();
    }
 }
 

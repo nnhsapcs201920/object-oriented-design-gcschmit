@@ -51,7 +51,7 @@ public class ChoiceQuestion extends Question
         for (int i = 0; i < this.choices.size(); i++)
         {
             int choiceNumber = i + 1;
-            str += choiceNumber + ": " + this.choices.get(i);
+            str += "\n" + choiceNumber + ": " + this.choices.get(i);
         }
 
         return str;
