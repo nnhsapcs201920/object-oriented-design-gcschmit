@@ -3,15 +3,13 @@ import java.util.Scanner;
 /**
    This program shows a simple quiz with one question.
 */
-public class QuestionDemo1
+public class QuestionDemo
 {
    public static void main(String[] args)
    {
       Scanner in = new Scanner(System.in);
 
-      Question q = new Question();
-      q.setText("Who was the inventor of Java?");
-      q.setAnswer("James Gosling");      
+      Question q = new FillInQuestion("The inventor of Java is _James Gosling_.");
 
       System.out.println( q );
       System.out.print("Your answer: ");

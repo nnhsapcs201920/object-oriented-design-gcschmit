@@ -8,21 +8,12 @@ public class ChoiceQuestion extends Question
     private ArrayList<String> choices;
 
     /**
-    Constructs a choice question with no choices.
-     */
-    public ChoiceQuestion()
-    {
-        this( "" );
-    }
-
-    /**
     Constructs a choice question with the specified question.
 
     @param question the text of this question
      */
     public ChoiceQuestion( String question ) 
     {
-        super( question );
         this.choices = new ArrayList<String>();
     }
 
@@ -50,10 +41,10 @@ public class ChoiceQuestion extends Question
         for (int i = 0; i < this.choices.size(); i++)
         {
             int choiceNumber = i + 1;
-            str += choiceNumber + ": " + this.choices.get(i);
+            str += "\n" + choiceNumber + ": " + this.choices.get(i);
         }
 
         return str;
-   }
+    }
 }
 
