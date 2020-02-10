@@ -35,6 +35,7 @@ public class Country implements Measurable
       return area;
    }
 
+   @Override
    public double getMeasure() 
    {
       return area;
