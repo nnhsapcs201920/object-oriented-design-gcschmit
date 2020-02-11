@@ -50,6 +50,7 @@ public class BankAccount implements Measurable
       return balance;
    }
 
+   @Override
    public double getMeasure()
    {
       return balance;
