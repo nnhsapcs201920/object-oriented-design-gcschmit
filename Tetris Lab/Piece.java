@@ -189,6 +189,7 @@ public final class Piece {
     private static Piece pieceRow(Piece firstPiece)
     {
         // TODO: implement method
+        return firstPiece;
     }
 
     /**

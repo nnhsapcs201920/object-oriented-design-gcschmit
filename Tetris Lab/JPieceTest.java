@@ -46,6 +46,8 @@ class JPieceTest extends JComponent
         {
             this.drawPiece(g2, piece, rect);
             piece = piece.nextRotation();
+            if(piece == null)
+                break;
             rect.setRect(rect.getX() + rectWidth, rect.getY(),
                     rect.getWidth(), rect.getHeight());
         }
