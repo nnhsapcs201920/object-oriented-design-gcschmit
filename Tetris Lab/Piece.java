@@ -188,8 +188,43 @@ public final class Piece {
      */
     private static Piece pieceRow(Piece firstPiece)
     {
-        // TODO: implement method
+        Piece piece = firstPiece;
+
+        // compute rotations until they repeat
+        while(true)
+        {
+            // copy the points from the specified piece before transforming
+            Point[] rotatedPoints = new Point[piece.getBody().length];
+            for(int i = 0; i < rotatedPoints.length; i++)
+            {
+                rotatedPoints[i] = new Point(piece.getBody()[i]);
+            }
+
+            // TODO: step 1: reflect across the line y = x
+            
+            // TODO: step 2: mirror vertically
+            
+            // create the rotated piece, update next, prepare for nextIteration
+            Piece rotatedPiece = new Piece(rotatedPoints);
+
+            // check if we are back to the original piece
+            if(rotatedPiece.equals(firstPiece))
+            {
+                // the previous piece links back to the original piece
+                piece.next = firstPiece;
+                break;
+            }
+            else
+            {
+                // update the next attribute and prepare for the next rotation
+                piece.next = rotatedPiece;
+                piece = rotatedPiece;
+            }
+        }
+
+        return firstPiece;
     }
+
 
     /**
      * Given a string of x,y pairs ("0 0   0 1 0 2 1 0"), parses the points into
