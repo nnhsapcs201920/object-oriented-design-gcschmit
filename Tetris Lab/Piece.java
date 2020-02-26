@@ -191,7 +191,7 @@ public final class Piece {
         Piece piece = firstPiece;
 
         // maximum of 4 rotations until we are back at the first piece (we may break earlier)
-        for( int i = 0; i < 4; i++)
+        for( int j = 0; j < 4; j++)
         {
             // copy the points from the specified piece before transforming
             Point[] rotatedPoints = new Point[piece.getBody().length];
