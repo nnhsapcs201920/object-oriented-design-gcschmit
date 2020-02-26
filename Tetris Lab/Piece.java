@@ -190,8 +190,8 @@ public final class Piece {
     {
         Piece piece = firstPiece;
 
-        // compute rotations until they repeat
-        while(true)
+        // maximum of 4 rotations until we are back at the first piece (we may break earlier)
+        for( int i = 0; i < 4; i++)
         {
             // copy the points from the specified piece before transforming
             Point[] rotatedPoints = new Point[piece.getBody().length];
@@ -202,7 +202,7 @@ public final class Piece {
 
             // TODO: step 1: reflect across the line y = x
             
-            // TODO: step 2: mirror vertically
+            // TODO: step 2: reflect vertically
             
             // create the rotated piece, update next, prepare for nextIteration
             Piece rotatedPiece = new Piece(rotatedPoints);
