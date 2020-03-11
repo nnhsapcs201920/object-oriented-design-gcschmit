@@ -605,9 +605,9 @@ public class JTetris extends JComponent
     /**
      * Creates the panel of UI controls.
      */
-    public java.awt.Container createControlPanel()
+    public Container createControlPanel()
     {
-        java.awt.Container panel = Box.createVerticalBox();
+        Container panel = Box.createVerticalBox();
 
         // COUNT
         countLabel = new JLabel("0");

@@ -267,9 +267,9 @@ class JBoardTest extends JComponent
      * 
      * Installs keyboard listeners and wire them to the action() message as well.
      */
-    public java.awt.Container createControlPanel()
+    public Container createControlPanel()
     {
-        java.awt.Container panel = new Box(BoxLayout.Y_AXIS);
+        Container panel = new Box(BoxLayout.Y_AXIS);
 
         JButton button;
 
